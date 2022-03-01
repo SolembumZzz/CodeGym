@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .ired {color: red;font-style: italic;}
+
+        td.text {padding-top: 10px;font-size: large;}
+
+        table.symptons {border-collapse: collapse; width: 100%;}
+        tr.symptons {background-color: lightslategray;}
+        .symptons {border: 1px solid darkgrey; height: 50px;}
+    </style>
+
+</head>
+
+<body>
+
+    <form>
+        <h4>Chọn ngôn ngữ để khai báo y tế /Select the language to declare health:</h6>
+            <table>
+                <tr>
+                    <td><img style="border: 3px solid darkgrey;"
+                            src="https://tokhaiyte.vn/App/images/Language/vi-big.png"></td>
+                    <td><img style="border: 3px solid darkgrey;"
+                            src="https://tokhaiyte.vn/App/images/Language/en-big.png"></td>
+                    <td><img style="border: 3px solid darkgrey;"
+                            src="https://tokhaiyte.vn/App/images/Language/china-big.png"></td>
+                    <td><img style="border: 3px solid darkgrey;"
+                            src="https://tokhaiyte.vn/App/images/Language/ko-big.png"></td>
+                    <td><img style="border: 3px solid darkgrey;"
+                            src="https://tokhaiyte.vn/App/images/Language/it-big.jpg"></td>
+                    <td><img style="border: 3px solid darkgrey;"
+                            src="https://tokhaiyte.vn/App/images/Language/cam-big.png"></td>
+                    <td><img style="border: 3px solid darkgrey;"
+                            src="https://tokhaiyte.vn/App/images/Language/ru-big.png"></td>
+                    <td><img style="border: 3px solid darkgrey;"
+                            src="https://tokhaiyte.vn/App/images/Language/es-big.png"></td>
+                    <td><img style="border: 3px solid darkgrey;"
+                            src="https://tokhaiyte.vn/App/images/Language/fr-big.png"></td>
+                    <td><img style="border: 3px solid darkgrey;"
+                            src="https://tokhaiyte.vn/App/images/Language/lo-big.png"></td>
+                    <td><img style="border: 3px solid darkgrey;"
+                            src="https://tokhaiyte.vn/upload/2001432/20200311/jp-big_63de0.png"></td>
+                </tr>
+            </table>
+
+            <h2 style="text-align: center;">MEDICAL DECLARATION FORM</h2>
+            <h3 style="text-align: center;">This is important document, your information is vital to allow health
+                authorities contact you to prevent communicable diseases
+        </h4>
+        <h4 style="text-align: center; color: red;">Warning: Declaring false information is a violation of
+            Vietnamese law and may be subject to criminal handling</h4>
+
+        <table style="border-collapse: collapse; width: 100%;">
+            <tr>
+                <td colspan="3" class="text">Object <span class="ired">(*)</span></td>
+                <td colspan="3" class="text">Gate <span class="ired">(*)</span></td>
+            </tr>
+            <tr>
+                <td colspan="3"><select name="object" style="width: 650px;">
+                        <option name="choose1">--Choose--</option>
+                        <option name="expert">Expert</option>
+                        <option name="vietnamese">Vietnamese</option>
+                        <option name="intstudent">International Student</option>
+                        <option name="other">Other</option>
+                    </select>
+                </td>
+                <td colspan="3"><select name="gate" style="width: 650px;">
+                        <option name="choose2">--Choose--</option>
+                        <option name="383station">383 station</option>
+                        <option name="adotgate">A Dot gate</option>
+                        <option name="apachaigate">A Pa Chai gate</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="6" style="height: 1cm;" class="text">Full name (CAPITAL LETTERS) <span
+                        class="ired">(*)</span></td>
+            </tr>
+            <tr>
+                <td colspan="6"><input name="fullname" type="text" style="width: 96%;"></td>
+            </tr>
+            <tr>
+                <td colspan="3" class="text">Date of birth <span class="ired">(*)</span></td>
+                <td colspan="1" class="text">Gender <span class="ired">(*)</span></td>
+                <td colspan="2" class="text">Nationality <span class="ired">(*)</span></td>
+            </tr>
+            <tr>
+                <td><select name="bday" style="width:200px">
+                        <option>Day</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                        <option>13</option>
+                        <option>14</option>
+                        <option>15</option>
+                        <option>16</option>
+                        <option>17</option>
+                        <option>18</option>
+                        <option>19</option>
+                        <option>20</option>
+                        <option>21</option>
+                        <option>22</option>
+                        <option>23</option>
+                        <option>24</option>
+                        <option>25</option>
+                        <option>26</option>
+                        <option>27</option>
+                        <option>28</option>
+                        <option>29</option>
+                        <option>30</option>
+                        <option>31</option>
+                    </select>
+                </td>
+                <td><select name="bmonth" style="width:200px">
+                        <option>Month</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                    </select>
+                </td>
+                <td><select name="byear" style="width:200px">
+                        <option>Year</option>
+                        <option>1996</option>
+                        <option>1997</option>
+                        <option>1998</option>
+                        <option>1999</option>
+                    </select>
+                </td>
+                <td><select name="gender" style="width:200px">
+                        <option>Select</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Other</option>
+                    </select>
+                </td>
+                <td colspan="2"><select name="nationality" style="width:400px">
+                        <option>American</option>
+                        <option>Vietnamese</option>
+                        <option>Yemeni</option>
+                        <option>Zambian</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="6" class="text">Passport number or other legal document <span class="ired">(*)</span></td>
+            </tr>
+            <tr>
+                <td colspan="6"><input name="passport" type="text" style="width: 96%;"></td>
+            </tr>
+            <tr>
+                <td colspan="6" class="text">Travel information <span class="ired">(*)</span></td>
+            </tr>
+            <tr>
+                <td colspan="6">
+                    <input name="plane" type="radio" name="travelinfo" value="plane">Plane
+                    <input name="ship" type="radio" name="travelinfo" value="ship">Ship
+                    <input name="car" type="radio" name="travelinfo" value="car">Car
+                    <input name="other" type="radio" name="travelinfo" value="other">Other (clarify)
+                </td>
+            </tr>
+            <tr style="display: none;" id="hidden_text_box">
+                <td colspan="6"><input name="othertransinfo" type="text" style="width: 99%"></td>
+            </tr>
+            <tr>
+                <td colspan="6" class="text"></td>
+            </tr>
+            <tr>
+                <td colspan="3" class="text">Transportation No.</td>
+                <td colspan="3" class="text">Seat No.</td>
+            </tr>
+            <tr>
+                <td colspan="3"><input name="transno" type="text" style="width: 95%; font: darkgrey;" value="Ex: VN123"></td>
+                <td colspan="3"><input name="seatno" type="text" style="width: 95%"></td>
+            </tr>
+            <tr>
+                <td colspan="3" class="text">Departure date <span class="ired">(*)</span></td>
+                <td colspan="3" class="text">Immigration date <span class="ired">(*)</span></td>
+            </tr>
+            <tr>
+                <td>
+                    <select name="depday" style="width:200px">
+                        <option>Day</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                        <option>13</option>
+                        <option>14</option>
+                        <option>15</option>
+                        <option>16</option>
+                        <option>17</option>
+                        <option>18</option>
+                        <option>19</option>
+                        <option>20</option>
+                        <option>21</option>
+                        <option>22</option>
+                        <option>23</option>
+                        <option>24</option>
+                        <option>25</option>
+                        <option>26</option>
+                        <option>27</option>
+                        <option>28</option>
+                        <option>29</option>
+                        <option>30</option>
+                        <option>31</option>
+                    </select>
+                </td>
+                <td><select name="depmonth" style="width:200px">
+                        <option>Month</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                    </select>
+                </td>
+                <td><select name="depyear" style="width:200px">
+                        <option>Year</option>
+                        <option>2019</option>
+                        <option>2020</option>
+                        <option>2021</option>
+                        <option>2022</option>
+                    </select>
+                </td>
+                <td>
+                    <select name="arrday" style="width:200px">
+                        <option>Day</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                        <option>13</option>
+                        <option>14</option>
+                        <option>15</option>
+                        <option>16</option>
+                        <option>17</option>
+                        <option>18</option>
+                        <option>19</option>
+                        <option>20</option>
+                        <option>21</option>
+                        <option>22</option>
+                        <option>23</option>
+                        <option>24</option>
+                        <option>25</option>
+                        <option>26</option>
+                        <option>27</option>
+                        <option>28</option>
+                        <option>29</option>
+                        <option>30</option>
+                        <option>31</option>
+                    </select>
+                </td>
+                <td><select name="arrmonth" style="width:200px">
+                        <option>Month</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                    </select>
+                </td>
+                <td><select name="arryear" style="width:200px">
+                        <option>Year</option>
+                        <option>2019</option>
+                        <option>2020</option>
+                        <option>2021</option>
+                        <option>2022</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="6" class="text">Place of departure (province/country)</td>
+            </tr>
+            <tr>
+                <td colspan="3" class="text">Country / Region <span class="ired">(*)</span></td>
+                <td colspan="3" class="text">Province <span class="ired">(*)</span></td>
+            </tr>
+            <tr>
+                <td colspan="3"><select name="depreg" style="width:650px">
+                        <option>America</option>
+                        <option>Vietname</option>
+                        <option>Yemen</option>
+                        <option>Zambia</option>
+                    </select>
+                </td>
+                <td colspan="3"><input name="deppro" type="text" style="width:650px">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="6" class="text">Place of destination (province/country)</td>
+            </tr>
+            <tr>
+                <td colspan="3" class="text">Country / Region <span class="ired">(*)</span></td>
+                <td colspan="3" class="text">Province <span class="ired">(*)</span></td>
+            </tr>
+            <tr>
+                <td colspan="3"><select name="arrreg" style="width:650px">
+                        <option>America</option>
+                        <option>Vietname</option>
+                        <option>Yemen</option>
+                        <option>Zambia</option>
+                    </select>
+                </td>
+                <td colspan="3"><input type="text" name="arrpro" style="width:650px">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="6" class="text">In the past 14 days, which province / city / territory / country have you been to? <span class="ired">(*)</span></td>
+            </tr>
+            <tr>
+                <td colspan="6"><textarea style="width: 96%;" rows="3"></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="6" class="text"><b>Select a property after quarantine </b></td>
+            </tr>
+            <tr>
+                <td colspan="2" class="text">Province <span class="ired">(*)</span></td>
+                <td colspan="2" class="text">District <span class="ired">(*)</span></td>
+                <td colspan="2" class="text">Ward <span class="ired">(*)</span></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input name="postquarantinepro" type="text"></td>
+                <td colspan="2"><input name="postquarantinedis" type="text"></td>
+                <td colspan="2"><input name="postquarantinewar" type="text"></td>
+            </tr>
+            <tr>
+                <td colspan="6" class="text">Quarantine place <span class="ired">(*)</span></td>
+            </tr>
+            <tr>
+                <td colspan="6"><input type="text" name="quarantineadr" style="width:96%"></td>
+            </tr>
+            <tr>
+                <td colspan="6" class="text"><b>Contact information in Vietnam</b></td>
+            </tr>
+            <tr>
+                <td colspan="2" class="text">Province <span class="ired">(*)</span></td>
+                <td colspan="2" class="text">District <span class="ired">(*)</span></td>
+                <td colspan="2" class="text">Ward <span class="ired">(*)</span></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input name="vnpro" type="text"></td>
+                <td colspan="2"><input name="vndis" type="text"></td>
+                <td colspan="2"><input name="vnwar" type="text"></td>
+            </tr>
+            <tr>
+                <td colspan="6" class="text">Staying address <span class="ired">(*)</span></td>
+            </tr>
+            <tr>
+                <td colspan="6"><input type="text" name="stayingadr" style="width:96%"></td>
+            </tr>
+            <tr>
+                <td colspan="6"><p style="font-style: italic; size: 1.5cm;">Phone number you will use in Vietnam (Is Roaming number or Vietnam number)</p></td>
+            </tr>
+            <tr>
+                <td colspan="3" class="text">Tel./Mob. <span class="ired">(*)</span></td>
+                <td colspan="3" class="text">Email <span class="ired">(*)</span></td>
+            </tr>
+            <tr>
+                <td colspan="3"><input type="tel" name="telenum" style="width:650px"></td>
+                <td colspan="3"><input type="email" name="email" style="width:650px"></td>
+            </tr>
+            <tr>
+                <td colspan="6" class="text"><b>If you have any of the followings at present or during the past 14 days (until the date of entry/exit/transit)? <span class="ired">(*)</span></b></td>
+            </tr>
+            <tr>
+                <td colspan="6">
+                    <table class="symptons">
+                        <tr class="symptons">
+                            <th class="symptons" style="text-align: left;">Symptons</th>
+                            <th class="symptons">Yes</th>
+                            <th class="symptons">No</th>
+                            <th class="symptons" style="text-align: left;">Symptons</th>
+                            <th class="symptons">Yes</th>
+                            <th class="symptons">No</th>
+                        </tr>
+                        <tr>
+                            <td class="symptons">Fever <span class="ired">(*)</span></td>
+                            <td class="symptons" style="text-align: center;"><input type="radio" name="fever" value="feverY"></td>
+                            <td class="symptons" style="text-align: center;"><input type="radio" name="fever" value="feverN"></td>
+                            <td class="symptons">Vomitting <span class="ired">(*)</span></td>
+                            <td class="symptons" style="text-align: center;"><input type="radio" name="vomitting" value="vomittingY"></td>
+                            <td class="symptons" style="text-align: center;"><input type="radio" name="vomitting" value="vomittingN"></td>
+                        </tr>
+                        <tr>
+                            <td class="symptons">Cough <span class="ired">(*)</span></td>
+                            <td class="symptons" style="text-align: center;"><input type="radio" name="cough" value="coughY"></td>
+                            <td class="symptons" style="text-align: center;"><input type="radio" name="cough" value="coughN"></td>
+                            <td class="symptons">Diarrhea <span class="ired">(*)</span></td>
+                            <td class="symptons" style="text-align: center;"><input type="radio" name="diarrhea" value="diarrheaY"></td>
+                            <td class="symptons" style="text-align: center;"><input type="radio" name="diarrhea" value="diarrheaN"></td>
+                        </tr>
+                        <tr>
+                            <td class="symptons">Dificulty of breathing <span class="ired">(*)</span></td>
+                            <td class="symptons" style="text-align: center;"><input type="radio" name="difbreathe" value="difbreatheY"></td>
+                            <td class="symptons" style="text-align: center;"><input type="radio" name="difbreathe" value="difbreatheN"></td>
+                            <td class="symptons">Skin Haemorrhage <span class="ired">(*)</span></td>
+                            <td class="symptons" style="text-align: center;"><input type="radio" name="haemorrhage" value="haemorrhageY"></td>
+                            <td class="symptons" style="text-align: center;"><input type="radio" name="haemorrhage" value="haemorrhageN"></td>
+                        </tr>
+                        <tr>
+                            <td class="symptons">Sore throat <span class="ired">(*)</span></td>
+                            <td class="symptons" style="text-align: center;"><input type="radio" name="sorethroat" value="sorethroatY"></td>
+                            <td class="symptons" style="text-align: center;"><input type="radio" name="sorethroat" value="sorethroatN"></td>
+                            <td class="symptons">Rash <span class="ired">(*)</span></td>
+                            <td class="symptons" style="text-align: center;"><input type="radio" name="rash" value="rashY"></td>
+                            <td class="symptons" style="text-align: center;"><input type="radio" name="rash" value="rashN"></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="6" class="text">List of vaccines or biologicals used:</td>
+            </tr>
+            <tr>
+                <td colspan="6"><textarea rows="2" style="width: 100%;"></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="6" class="text"><b>History of exposure: During the last 14 days, did you <span class="ired">(*)</span></b></td>
+            </tr>
+            <tr>
+                <td colspan="6">
+                    <table class="symptons">
+                        <tr class="symptons">
+                            <th colspan="4" class="symptons"></th>
+                            <th class="symptons">Yes</th>
+                            <th class="symptons">No</th>
+                        </tr>
+                        <tr>
+                            <td colspan="4" class="symptons">Visit any poultry farm / living animal market / slaughter house / contact to animal <span class="ired">(*)</span></td>
+                            <td class="symptons" style="text-align: center;"><input type="radio" name="animalcontact" value="animalcontactY"></td>
+                            <td class="symptons" style="text-align: center;"><input type="radio" name="animalcontact" value="animalcontactN"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="4" class="symptons">Care for a sick person of communicables diseases <span class="ired">(*)</span></td>
+                            <td class="symptons" style="text-align: center;"><input type="radio" name="sickpeoplecontact" value="sickpeoplecontactY"></td>
+                            <td class="symptons" style="text-align: center;"><input type="radio" name="sickpeoplecontact" value="sickpeoplecontactN"></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="6" class="text"><b>Choose a quarantine facility <span class="ired">(*)</span></b></td>
+            </tr>
+            <tr>
+                <td colspan="6" class="text"><input type="radio" name="quarantinefacility" value="general-base">General isolation base set</td>
+            </tr>
+            <tr>
+                <td colspan="6" class="text"><input type="radio" name="quarantinefacility" value="self-selected">Self-selected quarantine facility</td>
+            </tr>
+            <tr>
+                <td colspan="6" class="text"><input type="radio" name="quarantinefacility" value="other">Other</td>
+            </tr>
+            <tr>
+                <td><b>Information on testing for Covid-19</b></td>
+            </tr>
+            <tr>
+                <td class="text">Test results</td>
+                <td class="text">Result date</td>
+                <td class="text">Type of test</td>
+                <td colspan="2" class="text">Nation</td>
+                <td class="text">Result certificate file</td>
+            </tr>
+            <tr>
+                <td>
+                    <select name="testresult" style="width: 200px;">
+                        <option>--Choose--</option>
+                        <option>Positive</option>
+                        <option>Negative</option>
+                    </select>
+                </td>
+                <td><input type="text" name="resultdate"></td>
+                <td>
+                    <select name="testtype" style="width: 200px;">
+                        <option>--Choose--</option>
+                        <option>Quick test</option>
+                        <option>PCR</option>
+                    </select>
+                </td>
+                <td colspan="2"><select name="testnation" style="width: 200px;">
+                    <option>American</option>
+                    <option>Vietnamese</option>
+                    <option>Yemeni</option>
+                    <option>Zambian</option>
+                </select>
+                </td>
+                <td><input type="file" name="testcert"></td>
+            </tr>
+            <tr>
+                <td class="text"><b>Information on certificate of recovery from Covid-19 disease</b></td>
+            </tr>
+            <tr>
+                <td>Healing day </td>
+                <td colspan="2">Treatment facility</td>
+                <td colspan="2">Nation</td>
+                <td>Certificate file</td>
+            </tr>
+            <tr>
+                <td><input type="text" name="healdate"></td>
+                <td colspan="2"><input type="text" name="treatfactility"></td>
+                <td colspan="2"><input type="text" name="nation" width="200px"></td>
+                <td><input type="file" name="testcert"></td>
+            </tr>
+            <tr>
+                <td colspan="6"><input type="submit" value="Submit Form" style="width: 200px;"></td>
+            </tr>
+        </table>
+
+    </form>
+
+</body>
+
+<script>
+</script>
+
+</html>

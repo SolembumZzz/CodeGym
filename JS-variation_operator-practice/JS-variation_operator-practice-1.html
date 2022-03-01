@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+    <h1>YOUR SCORE:</h1>
+    <table>
+        <tr>
+            <td>Physics:</td>
+            <td><input type="number" name="phy"></td>
+        </tr>
+        <tr>
+            <td>Chemistry:</td>
+            <td><input type="number" name="che"></td>
+        </tr>
+        <tr>
+            <td>Biology:</td>
+            <td><input type="number" name="bio"></td>
+        </tr>
+        <tr>
+            <td>Total score:</td>
+            <td><input type="number" name="sum" readonly></td>
+        </tr>
+        <tr>
+            <td>Average score:</td>
+            <td><input type="number" name="avg" readonly></td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="submit" value="Submit" onclick="sumavg()"></td>
+        </tr>
+    </table>
+    
+
+    <script>
+        function sumavg(abc) {
+            let phy = parseFloat(document.getElementsByName("phy")[0].value);
+            let che = parseFloat(document.getElementsByName("che")[0].value);
+            let bio = parseFloat(document.getElementsByName("bio")[0].value);
+            let sum = phy + che + bio;
+            let avg = sum/3;
+            document.getElementsByName("sum")[0].value = parseFloat(sum).toFixed(2)
+            document.getElementsByName("avg")[0].value = parseFloat(avg).toFixed(2)
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+    <h1>Celsius to Fahrenheit Converter:</h1>
+    <table>
+        <tr>
+            <td>Celsius:</td>
+            <td><input type="number" name="cel" oninput="conversion()"></td>
+        </tr>
+        <tr>
+            <td>Fahrenheit:</td>
+            <td><input type="number" name="fah" readonly></td>
+        </tr>
+    </table>
+
+    <script>
+        function conversion() {
+           c = parseInt(document.getElementsByName("cel")[0].value);
+           f = (c*9/5) +32;
+           document.getElementsByName("fah")[0].value = f;
+        }
+    </script>
+</body>
+<html>
+    

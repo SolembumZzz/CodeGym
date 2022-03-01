@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+    <h1>Circle Perimeter Calculation:</h1>
+    <table>
+        <tr>
+            <td>Radius:</td>
+            <td><input type="number" name="rad" oninput="cal()"></td>
+        </tr>
+        <tr>
+            <td>Perimeter:</td>
+            <td><input type="number" name="per" readonly></td>
+        </tr>
+    </table>
+
+    <script>
+        function cal() {
+           r = parseFloat(document.getElementsByName("rad")[0].value);
+           peri = 2*Math.PI*r;
+           document.getElementsByName("per")[0].value = parseFloat(peri).toFixed(2);
+        }
+    </script>
+</body>
+<html>
+    

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+        Height:<input type="number" name="height"><br>
+        Width:<input type="number" name="width"><br>
+        Area:<input type="number" name="result"><br>
+        <input type="button" onclick="calculatingarea()" value="Calculate">
+    </form> 
+    <script>
+        function calculatingarea() {
+            let height = document.getElementsByName("height")[0].value;
+            let width = document.getElementsByName("width")[0].value;
+            let area = height*width;
+            document.getElementsByName("result")[0].value = area;
+        }
+    </script>
+</body>
+</html>

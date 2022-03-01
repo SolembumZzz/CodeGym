@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        th {
+            font:bold;
+        }
+        th, td {
+            width: 100px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>$Currency Converter:$</caption>
+        <tr>
+            <th>Amount</th>
+            <th></th>
+            <th>From Currency</th>
+            <th></th>
+            <th>To Currency</th>
+            <th></th>
+        </tr>
+        <tr>
+            <td><input type="number" name="money"></td>
+            <td></td>
+            <td>
+                <select name="from" id="f">
+                    <option value="VND">VND</option>
+                    <option value="USD">USD</option>
+                </select>
+            </td>
+            <td></td>
+            <td>
+                <select name="to" id="t">
+                    <option value="VND">VND</option>
+                    <option value="USD" selected>USD</option>
+                </select>
+            </td>
+            <td>
+                <input type="button" value="Submit" onclick="convert()">
+            </td>
+        </tr>
+    </table>
+    <p id="result" style="color: blue;"></p>
+
+    <script>
+        function convert() {
+            let FromCurrency = document.getElementById("f").value;
+            let ToCurrency = document.getElementById("t").value;
+            let Amount = parseInt(document.getElementsByName("money")[0].value);
+            let Result;
+            if (FromCurrency == ToCurrency) {
+                alert("Please change your currency!");
+            }
+            else {
+                if (FromCurrency == "VND") {
+                    Result = Amount*0.000044 + " " +"USD";
+                }
+                else {Result = Amount*22845 + " " + "VND";
+                }
+            }
+            document.getElementById("result").innerHTML = "Result: " + Result
+        }
+    </script>
+</body>
+</html>

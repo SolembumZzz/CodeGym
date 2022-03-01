@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <table>
+            <caption>
+                <h1>Calculator</h1>
+            </caption>
+            <tr>
+                <td colspan="2"><input type="number" id="firstnumber" size="25%"></td>
+                <td colspan="2"><input type="number" id="secondnumber" size="25%"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="Addtion(+)" id="add" onclick="add()"></td>
+                <td><input type="button" value="Substraction(-)" id="sub" onclick="sub()"></td>
+                <td><input type="button" value="Multiplication(X)" id="mul" onclick="mul()"></td>
+                <td><input type="button" value="Division(/)" id="div" onclick="div()"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="number" readonly id="result" size="25%"></td>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+        let a = parseFloat(document.getElementById("firstnumber").value);
+        let b = parseFloat(document.getElementById("secondnumber").value);
+
+        function add() {
+            document.getElementById("result").value = a + b
+        };
+
+        function sub() {
+            document.getElementById("result").value = a - b
+        };
+
+        function mul() {
+            document.getElementById("result").value = a * b
+        };
+
+        function div() {
+            document.getElementById("result").value = a / b
+        };  
+    </script>
+
+</body>
+
+</html>
