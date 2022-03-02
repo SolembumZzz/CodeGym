@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+</body>
+<script>
+    let num = parseInt(prompt(`Nhập số số nguyên tố: `));
+    let flag = true;
+    let display = `Số nguyên tố: `;
+    let currentnum = 2
+    for (let count = 0; count < num;) {
+        for (let i = 2; i < currentnum; i++) {
+            if (currentnum % i == 0) {
+                flag = false;
+                break;
+            }
+        }
+        if (flag == true) {
+            console.log(display)
+            display += ` ${currentnum};`;
+            count++;
+        }
+        flag = true;
+        currentnum++;
+    }
+    document.write(display);
+</script>
+
+</html>
