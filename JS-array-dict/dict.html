@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <input type="text" value="Nhập từ cần tra" id="slang">
+    <input type="button" value="Tra" onclick="search()"><br><br>
+    <input type="text" readonly id="tlang">
+</body>
+<script>
+    const eng = [
+        'alone',
+        'beg',
+        'chin',
+        'dig',
+        'enemy',
+        'founder'
+    ]
+    const vie = [
+        'đơn độc',
+        'cầu xin',
+        'cằm',
+        'đào',
+        'kẻ địch',
+        'người sáng lập'
+    ]
+
+    function search() {
+        let sl = document.getElementById("slang").value;
+        let tl = document.getElementById('tlang').value;
+        for (let i = 0; i < eng.length; i++) {
+            if (sl == eng[i]) {
+                document.getElementById("tlang").value = vie[i];
+            }
+        }
+    }
+</script>
+</html>
