@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="findConstellation()">Click Here!</button>
+    <p id="demo"></p>
+</body>
+<script>
+    let stars = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe ', 'Regulus'];
+    let constellation = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major ', 'Leo'];
+
+    function findConstellation() {
+        let star = prompt('Input a star name: ');
+        for (let i = 0; i <= stars.length; i++) {
+            console.log(i)
+            if (i == stars.length) {
+                document.getElementById('demo').innerHTML = 'Sorry, there is no result for this star.';
+            }
+            else if (star == stars[i]) {
+                document.getElementById('demo').innerHTML = `Constellation: ${constellation[i]}.`;
+                break;
+            }
+        }
+        
+    }
+</script>
+
+</html>
