@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+    <input type="button" id="btnCheck" value="Check Whether If It's A Number">
+    <p id="demo"></p>
+</body>
+
+<script>
+    document.getElementById('btnCheck').addEventListener('click', checkNumber);
+
+    function checkNumber() {
+        let num = prompt('Input something: ');
+        let result = !isNaN(num);
+        document.getElementById('demo').innerHTML = result;
+    }
+</script>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+    <div>
+        <input type="text" id="source">
+        <input type="button" value="Add to Array" id="btnAdd">
+    </div>
+
+    <div>
+        <input type="text" id="word">
+        <input type="button" value="Check existing value in Array" id="btnCheck">
+    </div>
+
+    <p id= "count"></p>
+</body>
+<script>
+    let arrayMain = []
+
+    document.getElementById('btnAdd').addEventListener('click', function () {
+        let input = document.getElementById('source').value;
+        addElementToArray(arrayMain, input);
+    }
+    )
+
+    function addElementToArray(arr, char) {
+        arr.push(char);
+        console.log(arr);
+    }
+
+    document.getElementById('btnCheck').addEventListener('click', function () {
+        let word = document.getElementById('word').value;
+
+        let result = document.getElementById('count');
+
+        checkExistingValue(arrayMain, word, result);
+    }
+    )
+
+    function checkExistingValue(arr, word, result) {
+        let count = 0
+
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] == word) {
+                count++;
+            }
+        }
+
+        count = (count > 0) ? count : -1;
+        console.log(count);
+
+        result.innerHTML = count;
+
+    }
+</script>
+
+</html>
