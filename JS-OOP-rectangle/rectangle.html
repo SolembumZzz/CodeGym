@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td colspan="2"><input type="number" id="inputHeight"></td>
+            <td colspan="2"><button type="button" id="submitHeight">Submit Height</button></td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="number" id="inputWidth"></td>
+            <td colspan="2"><button type="button" id="submitWidth">Submit Width</button></td>
+        </tr>
+        <tr>
+            <td><button type="button" id="calPeri">Perimeter</button></td>
+            <td>
+                <p id="showPeri"></p>
+            </td>
+            <td><button type="button" id="calArea">Area</button></td>
+            <td>
+                <p id="showArea"></p>
+            </td>
+        </tr>
+        <tr>
+            <td><button type="button" id="showRect">Show Rectangle</button></td>
+        </tr>
+    </table>
+
+    <canvas id="myCanvas" width="2000" height="1000" style="border:1px solid #d3d3d3";></canvas>
+</body>
+
+<script>
+    let rectangle = function (height, width) {
+        this.height = height;
+        this.width = width;
+        this.calPerimeter = function () {
+            return (this.height + this.width) * 2;
+        }
+        this.calArea = function () {
+            return this.height * this.width;
+        }
+    }
+
+    let inputRectangle = new rectangle();
+
+    document.getElementById('submitHeight').addEventListener('click', function () {
+        inputRectangle.height = Number(document.getElementById('inputHeight').value);
+    })
+    document.getElementById('submitWidth').addEventListener('click', function () {
+        inputRectangle.width = Number(document.getElementById('inputWidth').value);
+        console.log(inputRectangle);
+    })
+
+    document.getElementById('calPeri').addEventListener('click', function () {
+        document.getElementById('showPeri').innerHTML = inputRectangle.calPerimeter();
+        console.log(inputRectangle);
+    })
+
+    document.getElementById('calArea').addEventListener('click', function () {
+        document.getElementById('showArea').innerHTML = inputRectangle.calArea();
+        console.log(inputRectangle);
+    })
+
+    document.getElementById('showRect').addEventListener("click", function () {
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.beginPath();
+        ctx.rect(20, 20, inputRectangle.height, inputRectangle.width);
+        ctx.stroke();
+    })
+</script>
+
+</html>
