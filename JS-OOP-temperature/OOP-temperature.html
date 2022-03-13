@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th><label for="inputTempC">Celcius</label></th>
+            <th>Fahrenheit</th>
+            <th>>Kelvin</th>
+        </tr>
+        <tr>
+            <td><input type="number" id="inputTempC" value="0" min="-273"></td>
+            <td><input type="number" id="outputTempF" readonly></td>
+            <td><input type="number" id="outputTempK" readonly></td>
+        </tr>
+        <tr>
+            <td><button type="button" id="convert">Convert</button></td>
+        </tr>
+    </table>
+</body>
+
+<script>
+    document.getElementById('convert').addEventListener('click', function () {
+        let tempValue = document.getElementById('inputTempC').value;
+        let tempTemp = new temperature(tempValue);
+        document.getElementById('outputTempF').value = tempTemp.tempF();
+        document.getElementById('outputTempK').value = tempTemp.tempK();
+    })
+
+    let temperature = function(tempC) {
+        this.tempC = tempC;
+        this.tempF = function () {
+            return (tempC * 9/5) +32;
+        }
+        this.tempK = function () {
+            return tempC + 273.15;
+        }
+    }
+
+    
+</script>
+
+</html>
