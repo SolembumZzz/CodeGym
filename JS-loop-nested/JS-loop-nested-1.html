@@ -11,11 +11,11 @@
     for (i = 1; i <= 10; i++) {
     sout = sout + "<tr>";
         for (j = 1; j <= 10; j++) {
-            sout = sout + "<td>" + i * j + "</td>";
+            sout += "<td>" + i * j + "</td>";
         }
-        sout = sout + "</tr>";
+        sout += "</tr>";
     }
-    sout = sout + "</table>";
+    sout += "</table>";
     document.write(sout);
 </script>
 </html>
