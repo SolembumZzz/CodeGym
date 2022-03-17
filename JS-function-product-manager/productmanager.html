@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Manager</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <style>
+        table,
+        th,
+        td {
+            margin-top: 10px;
+        }
+
+        table {
+            width: 500px;
+        }
+
+        div {
+            width: 500px;
+            align-content: left;
+        }
+
+        .edit {
+            border: antiquewhite rgb(127, 127, 230);
+        }
+
+        .id {
+            text-align: center;
+        }
+
+        .btn {
+            text-align: center;
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Product Manager:</h1>
+
+    <div>
+        <input type="text" id="productName">
+        <button type="button" onclick='submitNewProduct()'>Add Product</button>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Product</th>
+                <th colspan="4">Action</th>
+            </tr>
+        </thead>
+        <tbody id="tbProducts">
+
+        </tbody>
+    </table>
+</body>
+
+<script>
+    class Product {
+        constructor(productId, productName) {
+            this.productId = productId;
+            this.productName = productName;
+        }
+    }
+
+    const products = [
+        new Product(1, 'Head & Shoulder'),
+        new Product(2, 'Clear'),
+        new Product(3, 'Omo'),
+        new Product(4, 'Normal Detergent'),
+    ];
+
+    function renderProduct() {
+        let htmls = products.map(function (product) {
+            return `
+                <tr'>
+                    <td class='id'>${product.productId}</td>
+                    <td id='name_${product.productId}'>${product.productName}</td>
+                    <td class='btn'><button type="button" onclick='editProduct(${product.productId})'>Edit</button></td>
+                    <td class='btn'><button type="button" onclick='removeProduct(${product.productId})'>Remove</button></td>
+                    <td class='btn'><button type="button" onclick='updateProduct(${product.productId})'>Update</button></td>
+                    <td class='btn'><button type="button" onclick='resetFields(${product.productId})'>Cancel</button></td>
+                    </tr>
+                    `
+        })
+        document.getElementById('tbProducts').innerHTML = htmls.join('');
+    }
+
+    function submitNewProduct() {
+        let currentID = findMaxID() + 1;
+        let productName = document.getElementById('productName').value;
+        let product = new Product(currentID, productName);
+
+        products.push(product);
+        renderProduct();
+        clearForm();
+    }
+
+    function findMaxID() {
+        let sortedProducts = [...products].sort(function (a, b) { return b.productId - a.productId });
+        return sortedProducts[0].productId;
+    }
+
+    function clearForm() {
+        document.getElementById('productName').value = '';
+    }
+
+    function removeProduct(id) {
+        let confirmation = window.confirm('Are you sure about this?');
+        if (confirmation) {
+            let index = products.findIndex(function (product) {
+                return (product.productId === id);
+            })
+            products.splice(index, 1);
+            renderProduct();
+        }
+    }
+
+    function getProductByID(id) {
+        return products.find(function (product) {
+            return product.productId == id;
+        })
+    }
+
+    function editProduct(id) {
+        let product = getProductByID(id);
+        let productName = document.getElementById(`name_${product.productId}`);
+        productName.innerHTML = `<input type='text' id='nameBox_${product.productName}' value='${product.productName}' class='edit'>`;
+    }
+
+    function updateProduct(id) {
+        let product = getProductByID(id);
+        let newProduct = document.getElementById(`nameBox_${product.productName}`).value;
+        product.productName = newProduct;
+
+        resetFields(id);
+    }
+
+    function resetFields(id) {
+        let product = getProductByID(id);
+        let productName = document.getElementById(`name_${product.productId}`);
+        productName.innerHTML = `${product.productName}`;
+    }
+
+
+
+    (function () {
+        renderProduct();
+    })()
+
+</script>
+
+</html>
