@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <div id="title">
+                <h1>Orders</h1>
+            </div>
+            <div id="btn-createNew">
+                <button type="button" class="btn btn-blue" onclick="showCreateForm()">Create New</button>
+            </div>
+            <table>
+                <tr>
+                    <td>Date</td>
+                    <td>Status</td>
+                    <td>Customers</td>
+                    <td>Email</td>
+                    <td>Tel</td>
+                    <td>Location</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><input type="date" class="inputNew" id="inputDate"></td>
+                    <td>
+                        <select id="inputStatus" class="inputNew" name="status">
+                            <option value="pending">Pending</option>
+                            <option value="dispatched">Dispatched</option>
+                            <option value="suspended">Suspended</option>
+                            <option value="canceled">Canceled</option>
+                        </select>
+                    </td>
+                    <td><input type="text" class="inputNew" id="inputCustomer"></td>
+                    <td><input type="email" class="inputNew" id="inputEmail"></td>
+                    <td><input type="tel" class="inputNew" id="inputTel"></td>
+                    <td><input type="text" class="inputNew" id="inputLocation"></td>
+                    <td class="tr-btn"><input type="button" class="btn btn-blue" onclick="submitNew()" value="Submit"></td>
+                </tr>
+            </table>
+        </div>
+        <!-- <div class="search">
+            <table>
+                <tr>
+                    <th class='sortTitle'><b>What are you looking for?</b></th>
+                    <th class='sortTitle'><b>Category</b></th>
+                    <th class='sortTitle'><b></b>Status</b></th>
+                </tr>
+                <tr>
+                    <td><input type="text" name="searchBox" id="search" placeholder="Search for category, name, status, etc."></td>
+                    <td><select></select></td>
+                    <td><select></select></td>
+                    <td><button type="button" class="btn-sort" onclick="sort()"></button></td>
+                    <td><button type="button" class="btn btn-blue">Search</button></td>
+                </tr>
+            </table>
+        </div> -->
+
+        <div class="product-summary">
+            <table>
+                <thead>
+                    <tr>
+                        <td colspan="8">
+                            <h3>Product Summary</h3>
+                        </td>
+                        <td colspan="2" class="tr-btn"><button type="button" class="btn btn-blue">Dispatched Selected</button></td>
+                    </tr>
+                    <tr class='titleList'>
+                        <th><input type="checkbox" onchange="selectAll()"></th>
+                        <th>ID</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                        <th>Customers</th>
+                        <th>Email</th>
+                        <th>Tel</th>
+                        <th>Location</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="orderList">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>

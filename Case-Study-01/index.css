@@ -1,0 +1,66 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Courier New', Courier, monospace;
+    box-sizing: border-box;
+}
+
+.container{
+    max-width: 1100px;
+    margin: 0px auto;
+}
+
+table, th, td {
+    border-collapse: collapse;
+    /* border: 1px solid red; */
+}
+
+table {
+    width: 100%;
+}
+
+th, td {
+    width: auto;
+    padding: 2px 2px 2px 2px;
+}
+
+.titleList {
+    background-color: azure;
+}
+
+.btn {
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.btn-blue {
+    background-color: rgb(0, 112, 149);
+    border-color: currentcolor;
+    color: white;
+}
+
+.tr-btn {
+    text-align: right;
+}
+
+.sortTitle {
+    text-align: left;
+}
+
+.action {
+    text-align: center;
+}
+
+#title {
+    float: left;
+}
+#btn-createNew {
+    float: right;
+}
+
+/* .btn-sort {
+} */
