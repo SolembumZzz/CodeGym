@@ -52,8 +52,8 @@ function renderOrders() {
                 <td class="btn-modify">
                     <i class="fas fa-cog" id="openMenu_${order.orderID}"></i>
                         <ul class="order-menu" id="orderMenu_${order.orderID}">
-                            <li id="editOrder_${order.orderID}"><i class="fas fa-pen-nib" onclick="editOrder(${order.orderID})"></i>Edit</li>
-                            <li id="removeOrder_${order.orderID}"><i class="fa fa-trash" onclick="removeOrder(${order.orderID})"></i>Remove</li>
+                            <li id="editOrder_${order.orderID}" onclick="editOrder(${order.orderID})"><i class="fas fa-pen-nib"></i>Edit</li>
+                            <li id="removeOrder_${order.orderID}" onclick="removeOrder(${order.orderID})"><i class="fa fa-trash"></i>Remove</li>
                         </ul>
                         <i title="Save" class="fas fa-save d-none" onclick="saveEdit(${order.orderID})" id="saveEdit_${order.orderID}"></i>
                         <i title="Reset" class="fas fa-times d-none" onclick="resetField(${order.orderID})" id="resetField_${order.orderID}"></i>
