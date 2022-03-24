@@ -99,7 +99,7 @@ function checkValidity(date, customer, tel, location) {
         if (location == '') {
             theFollowing.push("customer's location");
         }
-        alert(`WARNING!!! The following items are empty: ${theFollowing.join(', ')}`)
+        alert(`WARNING!!! The following fields are empty: ${theFollowing.join(', ')}`)
         return false;
     } else {
         return true;
@@ -222,7 +222,6 @@ function removeOrder(currentID) {
 
 function uncheckAllBoxes() {
     let allBoxes = document.querySelectorAll("input[type=checkbox]");
-    console.log(allBoxes);
     for (Element in allBoxes) {
         if (allBoxes[Element].checked == true) {
             allBoxes[Element].checked = false;

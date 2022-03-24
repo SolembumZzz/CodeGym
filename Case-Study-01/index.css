@@ -110,11 +110,8 @@ th:not(:last-child), td:not(:last-child) {
 
 #title {
     float: left;
+    margin-bottom: 10px;
 }
-#btn-createNew {
-    float: right;
-}
-
 ul {
     list-style: none;
 }
